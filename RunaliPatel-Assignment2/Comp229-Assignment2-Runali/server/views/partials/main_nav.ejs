@@ -1,0 +1,51 @@
+  <!-- Main Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+    <a class="navbar-brand" href="/">
+        <img src="/Assets/images/logo.png" width="60" height="60" alt="Logo" loading="lazy"> Portfolio
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item active">
+            <a class="nav-link" href="/home" style ="color: blueviolet;">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about" style ="color: blueviolet;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services" style ="color: blueviolet;">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects" style ="color: blueviolet; ">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact" style ="color: blueviolet;">Contact</a>
+          </li>
+
+          <li class="nav-item ">
+          <a class="nav-link" href="/contact-list" style ="color: blueviolet;">Contacts-List </a>
+          </li>
+
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+        <li class="navbar-text" style ="color: blueviolet;">Welcome, <%= displayName %></li>
+        <li class="nav-item"><a href="/logout" class="nav-link" style ="color: blueviolet;">
+          Logout</a></li>
+        <% } else { %>
+         <li class="nav-item"><a href="/login" class="nav-link" style ="color: blueviolet;">
+          Login</a></li>
+        <% } %> 
+
+        </ul>
+
+        
+    </div>
+    </div>
+  </nav>

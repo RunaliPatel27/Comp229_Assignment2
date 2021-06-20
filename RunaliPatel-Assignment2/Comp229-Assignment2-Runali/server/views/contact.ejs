@@ -1,0 +1,30 @@
+<!-- inclues both header and footer -->
+<%- include partials/header.ejs %>
+<link rel='stylesheet' href='/Content/contact.css' />
+<div class ="body" >
+<body class="body">
+<form action="/home">
+  <div class="container1">
+    <h1 >Contact Me!</h1>
+    <p >Go ahead, shoot me a message!</p>
+    <p >You can email me on rpate629@my.centennialcollege.ca or through 
+    my cell phone +254728661666</p>
+    <hr>
+    <!--Contact Me Form--->
+    <label for="email" ><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email"  >
+    <label for="firstname" ><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstname"  >
+    <label for="lastname" ><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastname"  >
+    <label for="phnumber" ><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phnumber" >
+    <label for="lastname" ><b>Subject</b></label>
+    <textarea type="text" placeholder="Enter Subject" name="subject" style="height:170px" ></textarea>
+    <hr>
+    <button href="/home" class="sendbtn">Send</button>
+  </div>
+  
+</form>
+</body>
+</div>
