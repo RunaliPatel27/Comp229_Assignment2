@@ -2,9 +2,9 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-//create a reference to the model
+//Reference is created to the model object 
 let Contact = require('../models/contact');
-
+//Displays the contact list 
 module.exports.displayContactList = (req,res,next) => {
     Contact.find((err,contactList) => {
         if(err)
@@ -13,8 +13,7 @@ module.exports.displayContactList = (req,res,next) => {
         }
         else
         {
-            //console.log(ContactList);
-
+           
             res.render('contact/list',
             {title: 'Contacts List', 
             ContactList: contactList, 
@@ -22,12 +21,12 @@ module.exports.displayContactList = (req,res,next) => {
         }
     });
 }
-
+//Displays add a new contact button
 module.exports.displayAddPage= (req,res,next) => {
     res.render('contact/add', {title: 'Add Contact',
     displayName: req.user ? req.user.displayName: ''})
 }
-
+//Displays add a new contact page 
 module.exports.processAddPage = (req,res,next) => {
         let newContact = Contact({
             "name": req.body.name,

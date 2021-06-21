@@ -28,7 +28,7 @@ module.exports.displayContactMePage= (req,res,next) =>{
 }
 
 module.exports.displayLoginPage= (req,res,next) =>{
-    //check if the user is already logged in
+    //Checks if the user is already logged in 
     if(!req.user)
     {
         res.render('auth/login',
@@ -117,7 +117,6 @@ module.exports.processRegisterPage = (req,res,next) => {
         else 
         {
             //if no error exists, then registration is successful
-
             //redirect the user and authenticate them
 
             return passport.authenticate('local')(req,res, () => {
